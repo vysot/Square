@@ -1,0 +1,124 @@
+:root {
+  --size: 200px;
+  --border-width: 1px;
+  --margin: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 70%;
+  margin: 20px auto;
+}
+.container {
+  display: inline-block;
+  margin: var(--margin);
+  height: calc(var(--size) + var(--border-width) * 2);
+  background-color: grey;
+  border: var(--border-width) solid black;
+  position: relative;
+}
+.container--sm {
+  width: calc(var(--size) + var(--border-width) * 2);
+}
+.container--lg {
+  width: calc(var(--size) * 2 + var(--border-width) * 2);
+}
+.block {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+.block--1 {
+  background-color: green;
+  top: 0;
+  left: 0;
+}
+.block--2 {
+  background-color: white;
+  top: 0;
+  right: 0;
+}
+.block--3 {
+  background-color: black;
+  bottom: 0;
+  left: 0;
+}
+.block--4 {
+  background-color: brown;
+  bottom: 0;
+  right: 0;
+}
+.block-lg {
+  width: calc(var(--size) * 2 - var(--margin) * 2);
+  height: calc(var(--size) - var(--margin) * 2);
+  top: var(--margin);
+  left: var(--margin);
+  background-color: red;
+  position: absolute;
+}
+.block--5 {
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+}
+.block--6 {
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transform: translate(100%, 50%);
+}
+.block--7 {
+  background-color: blue;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+}
+.block--h {
+  width: 25%;
+}
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-menu {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+}
+.item {
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  flex-direction: column;
+  border: 1px solid transparent;
+}
+.item:hover {
+  border: 1px solid black;
+}
+.item-link {
+  width: 100%;
+  height: 40px;
+  background-color: brown;
+}
+.item:hover .item-link {
+  background-color: yellow;
+}
+.item-link a {
+  color: white;
+}
+.item:hover .item-link a {
+  color: black;
+}
+.item-img {
+  width: 100%;
+  height: 108px;
+}
+.item-img img {
+  width: 60px;
+  height: 80px;
+}
